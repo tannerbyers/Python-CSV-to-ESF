@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<SeverityConfigFile Mode="override" Version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SeverityConfig.xsd">
+    <SeverityDefinition/>
+    <SeverityUsage/>
+</SeverityConfigFile>
