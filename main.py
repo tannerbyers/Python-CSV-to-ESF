@@ -13,31 +13,36 @@ def Runprogram():
         root.set('Mode', "override")
         root.set('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
         root.set('xsi:noNamespaceSchemaLocation', "SeverityConfig.xsd")
-        tree = ElementTree(root)
         SeverityDefinition = Element('SeverityDefinition')
         root.append(SeverityDefinition)
         SeverityUsage = Element('SeverityUsage')
         root.append(SeverityUsage)
+
+
+        def ErrorXMLGenerator(ErrorCode, SnipLvl):
+            ApplyTo=Element('ApplyTo')
+            SeverityUsage.append(ApplyTo)
+            criteria=Element('Criteria')
+            ApplyTo.append(criteria)
+            criteria.set('Name','emp.snip')
+            criteria.set('Value',SnipLvl)
+            criteria2=Element('Criteria')
+            ApplyTo.append(criteria2)
+            criteria2.set('Name', 'emp.id')
+            criteria2.set( 'Value', ErrorCode)
+            setSeverity=Element('SetSeverity') 
+            ApplyTo.append(setSeverity)  
+            setSeverity.set('SeverityID', "1001")
+
         for row in ValuesToAddFileList:
             if (row[0] == "EDIFECS Edit"):
                 print(row)
             else:
-                ApplyTo=Element('ApplyTo')
-                SeverityUsage.append(ApplyTo)
-                criteria=Element('Criteria')
-                ApplyTo.append(criteria)
-                criteria.set('Name','emp.snip')
-                criteria.set('Value', row[1])
-                criteria2=Element('Criteria')
-                ApplyTo.append(criteria2)
-                criteria2.set('Name', 'emp.id')
-                criteria2.set( 'Value', row[0])
-                setSeverity=Element('SetSeverity') 
-                ApplyTo.append(setSeverity)  
-                setSeverity.set('SeverityID', "1001")
-        test = (prettify(root))
-        print(test)
-        testxml.write(test)
+                ErrorXMLGenerator(row[0], row[1])
+        
+        prettyXMLdata = (prettify(root))
+        print(prettyXMLdata)
+        testxml.write(prettyXMLdata)
 
         
 
@@ -47,6 +52,9 @@ def prettify(elem):
     rough_string = tostring(elem, 'utf-8',method="xml")
     reparsed = minidom.parseString(rough_string)
     return reparsed.toprettyxml(indent="    ")
+
+
+
 
 
 Runprogram()
