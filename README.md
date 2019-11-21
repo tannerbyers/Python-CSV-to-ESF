@@ -25,11 +25,12 @@ $ cd Python-CSV-to-ESF
 ```
 Now you must add your Error code and Snip level to the EditsinCSV.csv file 
 Sample Information: 
-| Error Code | Snip Level |   
+
+| Error Code | Snip Level |
 |------------|------------|
-| 0x393939ec | 2          | 
-| 0x393939ed | 4          |  
-|            |            | 
+| 0x393939ec | 2          |
+| 0x393939ed | 4          |
+|            |            |
 
 Now run the below command: 
 ```
