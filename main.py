@@ -2,7 +2,6 @@ import csv
 from xml.etree.ElementTree import ElementTree
 from xml.etree.ElementTree import Element
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
-from lxml import etree
 from xml.dom import minidom
 
 
