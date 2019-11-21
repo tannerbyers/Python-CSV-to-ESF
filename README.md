@@ -24,6 +24,7 @@ $ git clone https://github.com/tannerbyers/Python-CSV-to-ESF
 $ cd Python-CSV-to-ESF
 ```
 Now you must add your Error code and Snip level to the EditsinCSV.csv file 
+
 Sample Information: 
 
 | Error Code | Snip Level |
@@ -45,9 +46,4 @@ $ python main.py
  - Create GUI
  - Add Encoding attribute to xml tag
  - Add Options (Remove all Snip.lvl)
-
-License
-----
-
-MIT
 
