@@ -8,9 +8,8 @@ from xml.dom import minidom
 
 
 def Runprogram():
-    with open('Medisys JW 5010_PP (2).csv') as ValuesToAddFile, open('test.esf', 'r+')as testxml:
+    with open('EditsinCSV.csv') as ValuesToAddFile, open('result.esf', 'r+')as testxml:
         ValuesToAddFileList = list(csv.reader(ValuesToAddFile, delimiter=','))
-        
 
         root=Element('SeverityConfigFile')
         root.set('Version', "2.0")
@@ -23,8 +22,8 @@ def Runprogram():
         SeverityUsage = Element('SeverityUsage')
         root.append(SeverityUsage)
         for row in ValuesToAddFileList:
-            if (row[0] == "ï»¿EDIFECS Edit"):
-                print("Edifecs found")
+            if (row[0] == "EDIFECS Edit"):
+                print(row)
             else:
                 # print(row[0])
                 ApplyTo=Element('ApplyTo')
