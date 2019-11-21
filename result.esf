@@ -1,5 +1,16 @@
 <?xml version="1.0" ?>
 <SeverityConfigFile Mode="override" Version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SeverityConfig.xsd">
     <SeverityDefinition/>
-    <SeverityUsage/>
+    <SeverityUsage>
+        <ApplyTo>
+            <Criteria Name="emp.snip" Value=" 2"/>
+            <Criteria Name="emp.id" Value="0x393939ec"/>
+            <SetSeverity SeverityID="1001"/>
+        </ApplyTo>
+        <ApplyTo>
+            <Criteria Name="emp.snip" Value=" 4"/>
+            <Criteria Name="emp.id" Value="0x393939ed"/>
+            <SetSeverity SeverityID="1001"/>
+        </ApplyTo>
+    </SeverityUsage>
 </SeverityConfigFile>

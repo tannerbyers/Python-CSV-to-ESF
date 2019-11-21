@@ -1,7 +1,5 @@
 import csv
-from xml.etree.ElementTree import ElementTree
-from xml.etree.ElementTree import Element
-from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree.ElementTree import Element, SubElement, Comment, tostring, ElementTree
 from xml.dom import minidom
 
 
