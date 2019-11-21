@@ -25,7 +25,6 @@ def Runprogram():
             if (row[0] == "EDIFECS Edit"):
                 print(row)
             else:
-                # print(row[0])
                 ApplyTo=Element('ApplyTo')
                 SeverityUsage.append(ApplyTo)
                 criteria=Element('Criteria')
@@ -39,9 +38,8 @@ def Runprogram():
                 setSeverity=Element('SetSeverity') 
                 ApplyTo.append(setSeverity)  
                 setSeverity.set('SeverityID', "1001")
-        # tree.write(testxml)
         test = (prettify(root))
-        print(tree)
+        print(test)
         testxml.write(test)
 
         
