@@ -37,11 +37,12 @@ $ python main.py
 ```
 
 #### ESF File Output (XML format)
-![Screenshot of Result in Notepad++](https://ibb.co/5sxhyTv)
+![Screenshot of Result in Notepad++](https://i.ibb.co/CVsKZBv/screenshot.png)
 
 ### Todos
 
  - Create GUI
+ - Add Encoding attribute to xml tag
  - Add Options (Remove all Snip.lvl)
 
 License
