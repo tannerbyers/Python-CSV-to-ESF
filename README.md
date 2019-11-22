@@ -4,16 +4,6 @@
 
 Python CSV-to-ESF is a simple, quick, offline, Python powered CSV to XML format generator for ESF files.
 
-### Tech
-
-Python CSV-to-ESF uses only built in python APIs:
-1. csv
-2. xml.etree.ElementTree
-3. xml.dom
-
-
-You can obtain the open source code from the [public repository](https://github.com/tannerbyers/PythonXMLBuilder/blob/master/main.py) on GitHub.
-
 ### Requirements
 [Python 3](https://www.python.org/downloads/) is all that is needed to run.
 
